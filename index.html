@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iraneide Santos | Harmonização Facial e Corporal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Montserrat', sans-serif;
+      }
+      h1, h2, h3, .serif {
+        font-family: 'Cormorant Garamond', serif;
+      }
+      .bg-luxury {
+        background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+      }
+      .btn-gold {
+        background: linear-gradient(to right, #d4af37, #f1c40f);
+        color: white;
+      }
+      .whatsapp-btn {
+        background-color: #25D366;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      @keyframes pulse-gold {
+        0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+        70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+        100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+      }
+      .animate-pulse-gold {
+        animation: pulse-gold 2s infinite;
+      }
+      .signature {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-50 text-gray-900 overflow-x-hidden">
+    <div id="root"></div>
+  </body>
+</html>
