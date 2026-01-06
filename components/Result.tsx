@@ -20,13 +20,13 @@ const Result: React.FC<ResultProps> = ({ answers, onGoToSite }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 flex flex-col justify-center items-center p-6 text-center">
-      <div className="max-w-md w-full bg-white rounded-[3rem] p-8 shadow-2xl relative overflow-hidden">
-        {/* Subtle decorative background */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-amber-100 rounded-full -mr-16 -mt-16 opacity-50"></div>
+    <div className="min-h-screen bg-gray-900 flex flex-col justify-center items-center p-4">
+      <div className="max-w-sm w-full bg-white rounded-[2.5rem] p-6 shadow-2xl relative overflow-hidden border border-amber-100">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-24 h-24 bg-amber-50 rounded-full -mr-12 -mt-12 opacity-60"></div>
         
         <div className="relative z-10 flex flex-col items-center">
-          <div className="w-32 h-32 rounded-full border-4 border-amber-500 p-1 mb-6">
+          <div className="w-20 h-20 rounded-full border-2 border-amber-500 p-0.5 mb-4 shadow-lg">
             <img 
               src={IMAGES.floating} 
               alt={EXPERT_NAME} 
@@ -34,44 +34,49 @@ const Result: React.FC<ResultProps> = ({ answers, onGoToSite }) => {
             />
           </div>
 
-          <div className="flex items-center gap-2 text-green-600 font-bold text-xs tracking-widest uppercase mb-4">
-            <CheckCircle size={14} /> Perfil Compatível
+          <div className="flex items-center gap-1.5 text-green-600 font-bold text-[10px] tracking-widest uppercase mb-2 bg-green-50 px-3 py-1 rounded-full">
+            <CheckCircle size={12} /> Perfil Analisado
           </div>
 
-          <h2 className="text-3xl font-bold text-gray-900 serif mb-2">Você é a Paciente ideal</h2>
-          <p className="text-gray-500 text-sm mb-10 leading-relaxed px-2">
-            Com base nas suas respostas, o Método da <span className="font-semibold text-gray-800">{EXPERT_NAME}</span> consegue entregar exatamente a naturalidade e segurança que você procura.
+          <h2 className="text-2xl font-bold text-gray-900 serif mb-1">Diagnóstico Concluído</h2>
+          <p className="text-gray-500 text-xs mb-6 leading-relaxed px-4">
+            Você possui o perfil ideal para o protocolo de naturalidade da <span className="font-bold text-gray-800">{EXPERT_NAME}</span>.
           </p>
 
-          <div className="w-full flex flex-col gap-3">
+          <div className="w-full flex flex-col gap-2">
             <a 
               href={formatAnswersForWhatsApp()} 
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 shadow-lg shadow-green-200 transition-all animate-pulse-gold"
+              className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.98] animate-pulse-gold text-sm"
             >
-              <Send size={20} />
-              Enviar minha avaliação a Dra
+              <Send size={18} />
+              Enviar Avaliação p/ Dra
             </a>
 
-            <a 
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-5 rounded-2xl flex items-center justify-center gap-3 transition-all"
-            >
-              <MessageCircle size={20} />
-              Chamar no WhatsApp sem compromisso
-            </a>
-
-            <button 
-              onClick={onGoToSite}
-              className="w-full bg-gray-900 hover:bg-black text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 transition-all mt-2"
-            >
-              Ver detalhes e Continuar no Site
-              <ArrowRight size={20} />
-            </button>
+            <div className="grid grid-cols-2 gap-2">
+              <a 
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-50 hover:bg-gray-100 text-gray-700 font-bold py-3 rounded-xl flex flex-col items-center justify-center gap-1 transition-all border border-gray-100 text-[10px]"
+              >
+                <MessageCircle size={16} className="text-green-500" />
+                WhatsApp
+              </a>
+              <button 
+                onClick={onGoToSite}
+                className="bg-gray-900 hover:bg-black text-white font-bold py-3 rounded-xl flex flex-col items-center justify-center gap-1 transition-all text-[10px]"
+              >
+                <ArrowRight size={16} className="text-amber-400" />
+                Ver Site
+              </button>
+            </div>
           </div>
+
+          <p className="mt-4 text-[9px] text-gray-400 uppercase tracking-tighter font-medium">
+            Atendimento Exclusivo em Itaquera - SP
+          </p>
         </div>
       </div>
     </div>
