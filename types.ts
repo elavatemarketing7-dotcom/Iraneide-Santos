@@ -2,6 +2,7 @@
 export enum AppState {
   CHOICE = 'CHOICE',
   QUIZ = 'QUIZ',
+  LOADING = 'LOADING',
   RESULT = 'RESULT',
   SITE = 'SITE'
 }
