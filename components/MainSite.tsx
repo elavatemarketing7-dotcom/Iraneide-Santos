@@ -30,37 +30,40 @@ const MainSite: React.FC = () => {
     <div className="main-site pb-20">
       
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[90vh] flex flex-col justify-end">
+      <section className="relative min-h-[95vh] flex flex-col justify-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={IMAGES.hero} 
             alt={EXPERT_NAME} 
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-[center_top] md:object-center transition-transform duration-1000 hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
+          {/* Subtle overlay that keeps the photo apparent but allows text to be readable */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
         </div>
 
-        <div className="relative z-10 p-6 md:p-12 space-y-4 max-w-4xl">
-          <h2 className="text-amber-400 font-bold tracking-[0.2em] uppercase text-xs md:text-sm">Especialista em Naturalidade</h2>
-          <h1 className="text-4xl md:text-6xl text-white font-bold serif leading-tight">
-            Eu sou {EXPERT_NAME}, e minha missão é revelar a sua melhor versão.
-          </h1>
-          <p className="text-gray-300 text-base md:text-xl max-w-xl font-light leading-relaxed">
-            Harmonização avançada que respeita seus traços, trazendo rejuvenescimento com segurança e alta performance estética.
-          </p>
+        <div className="relative z-10 p-6 md:p-20 space-y-6 max-w-5xl">
+          <div className="space-y-4">
+            <h2 className="text-amber-400 font-bold tracking-[0.3em] uppercase text-xs md:text-sm drop-shadow-lg">Especialista em Naturalidade</h2>
+            <h1 className="text-4xl md:text-7xl text-white font-bold serif leading-tight drop-shadow-2xl">
+              Eu sou {EXPERT_NAME}, e minha missão é revelar a sua melhor versão.
+            </h1>
+            <p className="text-white/90 text-lg md:text-2xl max-w-2xl font-light leading-relaxed drop-shadow-md">
+              Harmonização avançada que respeita seus traços, trazendo rejuvenescimento com segurança e alta performance estética.
+            </p>
+          </div>
 
-          <div className="pt-6">
+          <div className="pt-4">
             <a 
               href={WHATSAPP_URL} 
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-white text-gray-900 font-bold py-5 px-8 rounded-2xl shadow-2xl hover:bg-gray-100 transition-all animate-pulse-gold w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-3 bg-white text-gray-900 font-bold py-5 px-10 rounded-2xl shadow-2xl hover:bg-gray-100 transition-all animate-pulse-gold w-full sm:w-auto justify-center"
             >
               <MessageCircle className="text-green-500 fill-current" />
               Agendar consulta
             </a>
-            <p className="text-gray-400 text-xs mt-3 flex items-center justify-center sm:justify-start gap-1">
-              <ShieldCheck size={12} /> Agendar consulta
+            <p className="text-white/70 text-xs mt-4 flex items-center justify-center sm:justify-start gap-2 font-medium">
+              <ShieldCheck size={14} className="text-amber-400" /> Agendar consulta
             </p>
           </div>
         </div>
@@ -124,7 +127,7 @@ const MainSite: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. MAIS PROVAS (Bastidores) - MOVED HERE */}
+      {/* 4. MAIS PROVAS (Bastidores) */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">

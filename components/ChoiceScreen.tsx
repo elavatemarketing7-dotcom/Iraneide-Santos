@@ -11,13 +11,13 @@ interface ChoiceScreenProps {
 const ChoiceScreen: React.FC<ChoiceScreenProps> = ({ onStartQuiz, onGoToSite }) => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-cover bg-center relative" 
-         style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${IMAGES.hero})` }}>
+         style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.7)), url(${IMAGES.hero})` }}>
       
       <div className="text-center z-10 w-full max-w-md space-y-8">
         <div className="space-y-4">
-          <h2 className="text-white text-xl font-light tracking-widest uppercase mb-2">Seja Bem-Vinda</h2>
-          <h1 className="text-4xl md:text-5xl text-white font-bold serif">{EXPERT_NAME}</h1>
-          <p className="text-gray-200 text-sm md:text-base px-4">
+          <h2 className="text-white text-xl font-light tracking-[0.3em] uppercase mb-2 drop-shadow-md">Seja Bem-Vinda</h2>
+          <h1 className="text-5xl md:text-6xl text-white font-bold serif drop-shadow-2xl">{EXPERT_NAME}</h1>
+          <p className="text-white text-sm md:text-base px-4 font-medium drop-shadow-md">
             Escolha como deseja iniciar sua jornada de transformação personalizada e exclusiva.
           </p>
         </div>
@@ -57,7 +57,7 @@ const ChoiceScreen: React.FC<ChoiceScreenProps> = ({ onStartQuiz, onGoToSite }) 
         </div>
       </div>
 
-      <div className="absolute bottom-8 text-white/40 text-[10px] tracking-[0.2em] uppercase">
+      <div className="absolute bottom-8 text-white/60 text-[10px] tracking-[0.2em] uppercase font-bold drop-shadow-sm">
         Itaquera - SP • Estética de Resultados
       </div>
     </div>
